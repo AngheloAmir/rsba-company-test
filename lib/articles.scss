@@ -1,0 +1,80 @@
+@import './screen';
+
+#articles {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    @include desktopscreen {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div {
+        width: 100%;
+        margin-top: 2rem;
+
+        @include desktopscreen {
+            margin-top: 0;
+            width: 49%;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        a {
+            color: blue;
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            width: 30%;
+            margin: auto;
+
+            @include desktopscreen {
+                padding: 0 1rem;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        aside {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+
+            @include desktopscreen {
+                margin-top: 1rem;
+            }
+
+            img {
+                float: left;
+            }
+
+            p {
+                padding: 0 1rem;
+                margin: 0;
+                text-indent: 2rem;
+
+                @include desktopscreen {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    div:first-child {
+        @include desktopscreen {
+            border-right: 2px solid lightgray;
+            padding-right: 1rem;
+        }
+        
+    }
+}

@@ -1,0 +1,35 @@
+@import './screen';
+
+footer {
+    background-color: rgb(54, 54, 54);
+    padding: 2rem;
+
+    h4 {
+        color: white;
+        text-align: center;
+    }
+
+    .columns {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+
+        @include desktopscreen {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            color: white;
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 100%;
+
+            @include desktopscreen {
+                width: 45%;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/*
+    When editing this file, the content should be place back to navigation.scss
+    and when completed, paste it in this file.
+    Because changing this does not immediately take effect.
+*/
+
+@import '../screen';
+
+$hovercolor:    rgb(15, 106, 146);
+$hoverbg:       rgb(14, 157, 192);
+$img-width:     210px;
+$img-height:    70px;
+$rsb-text-color: rgb(15, 106, 146);
+
+#nav-desktop {
+    display: flex !important;
+    justify-content: space-between;
+
+    img {
+        width:  $img-width;
+        height: $img-height;
+    }
+
+    .contents {
+        width: 90%;
+        margin: auto;
+
+        @include desktopscreen {
+            width: 80%;
+        }
+    }
+}
+
+.contents .bar {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        color: $rsb-text-color;
+        font-size: 18px;
+        font-weight: 700;
+
+        @include desktopscreen {
+            font-size: 21px;
+        }
+    }
+
+    form {
+        display: flex;
+        width: 40%;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.contents .navitems {
+    padding-top: 0.5rem;
+    max-width: 700px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1rem;
+
+        li {
+            text-decoration: none;
+            list-style: none;
+            width: 100%;
+            text-align: center;
+
+            a {
+                display: block;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                list-style: none;
+            }
+        }
+        a:hover {
+            background-color: $hoverbg;
+            border-radius: 1rem;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/*
+Usage:
+    @include tabletscreen {
+        background-color: green; 
+    }
+    @include desktopscreen {
+        background-color: blue;
+    }
+*/
+footer {
+  background-color: #363636;
+  padding: 2rem;
+}
+footer h4 {
+  color: white;
+  text-align: center;
+}
+footer .columns {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+@media (min-width: 981px) {
+  footer .columns {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+footer .columns p {
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 981px) {
+  footer .columns p {
+    width: 45%;
+  }
+}

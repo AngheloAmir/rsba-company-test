@@ -1,0 +1,106 @@
+@import 'lib/screen';
+
+html,
+body {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(15, 106, 146);
+  border: 2px solid transparent;
+  border-radius: 0.1rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  cursor: pointer !important;
+}
+
+button:hover {
+  border: 2px solid white;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid gray;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  padding-left: 0.6rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 3rem;
+
+  @include tabletscreen {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  @include desktopscreen {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.7rem;
+  line-height: 2.6rem;
+
+  @include tabletscreen {
+    font-size:  2rem;
+    line-height: 3rem;
+  }
+
+  @include desktopscreen {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 2rem;
+
+  @include tabletscreen {
+    font-size:  1.45rem;
+    line-height: 2.5rem;
+  }
+
+  @include desktopscreen {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+
+.nav-spacer {
+  margin-top: 4.5rem;
+
+  @include tabletscreen {
+    margin-top: 5.4rem;
+  }
+}
+
+.spacer {
+  margin-top: 1.5rem;
+
+  @include tabletscreen {
+    margin-top: 4.5rem;
+  }
+}

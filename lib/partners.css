@@ -1,0 +1,43 @@
+/*
+Usage:
+    @include tabletscreen {
+        background-color: green; 
+    }
+    @include desktopscreen {
+        background-color: blue;
+    }
+*/
+#partners {
+  width: 60%;
+  margin: auto;
+}
+@media (min-width: 579px) {
+  #partners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 160px 100px;
+    width: 80%;
+    max-width: 800px;
+  }
+}
+#partners a {
+  display: flex;
+  align-content: center;
+  align-self: center;
+}
+#partners a img {
+  align-self: center;
+  margin-top: 1rem;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 579px) {
+  #partners a img {
+    max-width: 260px;
+    margin: auto;
+  }
+}
+#partners a img:hover {
+  border: 1px solid #0f6a92;
+}

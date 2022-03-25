@@ -1,0 +1,49 @@
+/*
+    The root style for the navigation bar
+*/
+@import '../screen';
+
+@import './menuicon.scss';
+@import './navdesktop.scss';
+@import './dropdown.scss';
+
+$bgcolor:       rgb(233, 233, 233);
+$hovercolor:    rgb(15, 106, 146);
+
+#navigation {
+    background-color: $bgcolor;
+    box-shadow: 2px 2px 3px rgba($color: #000000, $alpha: 0.5);
+    position: fixed;
+    top: 0; left: 0;
+    padding: 0.5rem 0;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+        width: 90%;
+        margin:auto;
+
+        .mobile {
+            display: flex;
+            justify-content: space-between;
+            
+            @include tabletscreen {
+                display: none;
+            }
+        }
+
+        .desktop {
+            display: none;
+            max-width: 1200px;
+            margin: auto;
+
+            @include tabletscreen {
+                display: block;
+            }
+        }
+    }
+} 
+
+.nav-active {
+    text-decoration: underline !important;
+}

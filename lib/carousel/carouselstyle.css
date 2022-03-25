@@ -1,0 +1,228 @@
+/*
+Usage:
+    @include tabletscreen {
+        background-color: green; 
+    }
+    @include desktopscreen {
+        background-color: blue;
+    }
+*/
+#carousel {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+@media (min-width: 579px) {
+  #carousel {
+    width: 85%;
+  }
+}
+#carousel .slideContainer .slideItem {
+  background-color: #8a8888;
+  display: none;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  transition: 1.5s ease;
+}
+#carousel .slideContainer .slideItem img {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+@media (min-width: 981px) {
+  #carousel .slideContainer .slideItem img {
+    max-height: 600px;
+    height: 480px;
+    width: 380px;
+  }
+}
+@media (min-width: 1200px) {
+  #carousel .slideContainer .slideItem img {
+    width: 520px;
+    height: 450px;
+  }
+}
+#carousel .slideContainer .slideItem .textContainer {
+  padding: 0rem 2rem 2rem 2rem;
+  width: 100%;
+}
+@media (min-width: 981px) {
+  #carousel .slideContainer .slideItem .textContainer {
+    padding: 3rem;
+  }
+}
+#carousel .slideContainer .slideItem .textContainer h3 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+@media (min-width: 1200px) {
+  #carousel .slideContainer .slideItem .textContainer h3 {
+    font-size: 3rem;
+    margin: 1rem;
+  }
+}
+#carousel .slideContainer .slideItem .textContainer p {
+  color: white;
+  line-height: 2rem;
+}
+@media (min-width: 981px) {
+  #carousel .slideContainer .slideItem .textContainer p {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.visibleSlide {
+  display: block !important;
+}
+@media (min-width: 981px) {
+  .visibleSlide {
+    display: flex !important;
+  }
+}
+
+.buttons .prev,
+.buttons .next {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: -20px;
+  padding: 12px;
+  position: absolute;
+  transition: 0.5s ease;
+  top: 18rem;
+  width: auto;
+}
+@media (min-width: 981px) {
+  .buttons .prev,
+.buttons .next {
+    top: 12rem;
+    font-size: 4rem;
+  }
+}
+.buttons .prev {
+  left: 2.5%;
+}
+.buttons .next {
+  right: 2.5%;
+}
+.buttons .prev:hover,
+.buttons .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+/*
+#carousel {
+    background-color: white;
+    margin: auto;
+    padding-top: 5rem;
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+
+    .slideContainer {
+        .slideItem {
+            background-color: rgb(166, 166, 166);
+            display: none;
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            transition: 1.5s ease;
+
+            img {
+                width: 720px;
+                height: 540px;
+            }
+
+            .textContainer {
+                padding: 3rem;
+                width: 100%;
+
+                h1 {
+                    color: white;
+                    font-size: 3rem;
+                    margin: 0;
+                    width: 1px;
+                }
+
+                p {
+                    color: white;
+                    line-height: 2rem;
+                    width: 85%;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to   {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to   {opacity: 1}
+}
+
+.buttons {
+    .prev,
+    .next {
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0 3px 3px 0;
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+        margin-top: -20px;
+        padding: 16px;
+        position: absolute;
+        transition: 0.5s ease;
+        top: 50%;
+        width: auto;
+    }
+
+    .prev {
+        left: 2.5%;
+    }
+
+    .next {
+        right: 2.5%;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 1;
+    }
+}
+*/

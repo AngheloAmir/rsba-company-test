@@ -1,0 +1,85 @@
+@import '_screen.scss';
+
+#hero {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        opacity: 0.6;
+
+        @include desktopscreen {
+            opacity: 1;
+        }
+    }
+
+    .contents {
+        position: absolute;
+        top: 15%;
+        left: 0;
+
+        @include desktopscreen {
+            right:  7%;
+        }
+    }
+
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top:    110%;
+        left:   10%;
+        width:  80%;
+        
+        @include tabletscreen {
+            width: 60%;
+            top:   115%;
+            left:  20%;
+        }
+
+        @include desktopscreen {
+            left:   60%;
+            width:  40% !important;
+        }
+    }
+}
+
+#hero .contents {
+    h1 {
+        color: white;
+        text-shadow: 3px 3px 10px black;
+        text-align: center;
+        width: 85%;
+        margin: auto;
+
+        @include tabletscreen {
+            width: 70%;
+        }
+
+        @include desktopscreen {
+            width: 50%;
+            float: right;
+            text-align: right;
+        }
+
+        span {
+            color: rgb(132, 203, 233);
+        }
+    }
+}
+
+#hero .btn {
+    button {
+        width: 45%;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+
+        @include desktopscreen {
+            font-size: 1.5rem;
+        }
+    }
+    :last-child {
+        background-color: rgb(68, 171, 216);;
+    }
+}

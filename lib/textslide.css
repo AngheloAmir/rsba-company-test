@@ -1,0 +1,24 @@
+/*
+Usage:
+    @include tabletscreen {
+        background-color: green; 
+    }
+    @include desktopscreen {
+        background-color: blue;
+    }
+*/
+#textslide {
+  margin: auto;
+  padding-top: 1rem;
+  text-align: center;
+  width: 80%;
+}
+@media (min-width: 981px) {
+  #textslide {
+    max-width: 800px;
+  }
+  #textslide p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+}
